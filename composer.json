@@ -1,0 +1,34 @@
+{
+    "name": "fesor/testing-workshop",
+    "description": "Testing Workshop Exercises",
+    "type": "project",
+    "autoload": {
+      "psr-4": {
+        "Workshop\\": "src/"
+      }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Workshop\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2",
+        "phpunit/php-code-coverage": "^5.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergey Protko",
+            "email": "sergey.protko@intellectsoft.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:report": "vendor/bin/phpunit --coverage-html coverage --testdox-html tests_results.html",
+        "docker:test": "docker-compose run --rm php vendor/bin/phpunit",
+        "docker:test:report": "docker-compose run --rm php vendor/bin/phpunit --coverage-html coverage --testdox-html tests_results.html"
+    }
+}

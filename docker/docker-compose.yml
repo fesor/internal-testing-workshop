@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  php:
+    image: zaherg/php-7.1-xdebug-alpine
+    volumes:
+      - './../:/app'
+    working_dir: '/app'

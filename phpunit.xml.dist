@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        colors="false"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        bootstrap="vendor/autoload.php"
+        stopOnFailure="true">
+    <filter>
+        <blacklist>
+            <directory>vendor</directory>
+        </blacklist>
+        <whitelist>
+            <!-- lib subfolders to include -->
+            <directory>src/</directory>
+        </whitelist>
+    </filter>
+
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory>tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
